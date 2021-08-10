@@ -1,0 +1,25 @@
+/*****************************/
+.Autocomplete {
+    width: 100%;
+    margin: 0 auto;
+}
+.Autocomplete .search-result {
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-height: 320px;
+    overflow-y: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.28);
+}
+.Autocomplete .list-group-item {
+    cursor: pointer;
+}
+.Autocomplete .list-group-item.active {
+    background-color: lightgray;
+    border-color: #000000;
+    color: #212529;
+}
+.Autocomplete .list-group-item:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+}
