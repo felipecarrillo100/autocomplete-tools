@@ -17,6 +17,7 @@ Make sure you include the styles in your project. Versions in css and scss are a
 * css: autocomplete-tools/css/styles.css
 * scss: autocomplete-tools/scss/styles.scss
 
+NOTE: If you use the scss version, then make sure you include bootstrap.scss first to make sure the color variables are defined.
 ## To use
 Add the component to a Form as you would do with any other React-Boostrap form control
 
