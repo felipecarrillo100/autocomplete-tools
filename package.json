@@ -1,6 +1,6 @@
 {
   "name": "autocomplete-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React Typescript module that provides autocomplete components. It requires Bootstrap > 4.x",
   "keywords": [
     "bootstrap",
