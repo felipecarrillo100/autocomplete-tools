@@ -5,9 +5,18 @@ A React Typescript module that provides autocomplete components. It requires Boo
 npm install autocomplete-tools
 
 ## How to include
+Code is available in javascript and TypeScript versions
+
+### Step 1: Import the code
 ```javascript
 import { AutoComplete, AutoCompleteAjax } from "autocomplete-tools";
 ```
+
+###Step 2: Import the styles:
+Make sure you include the styles in your project. Versions in css and scss are available
+* css: autocomplete-tools/css/styles.css
+* scss: autocomplete-tools/scss/styles.scss
+
 ## To use
 Add the component to a Form as you would do with any other React-Boostrap form control
 
