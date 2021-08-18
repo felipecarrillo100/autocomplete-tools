@@ -110,4 +110,7 @@ const customRender = (item) => (
           <Badge variant="secondary">{item.capital}</Badge>
       </>
   )
-```  
+```
+
+Small code sandbox:
+https://codesandbox.io/s/autocomplete-tools-08l5h
