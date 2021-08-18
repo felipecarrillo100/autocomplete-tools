@@ -4,6 +4,7 @@
     margin: 0 auto;
 }
 .Autocomplete .search-result {
+    z-index: 1;
     position: absolute;
     left: 0;
     right: 0;
