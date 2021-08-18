@@ -98,6 +98,6 @@ const customRender = (item) => (
       </>
   )
 ```
-
-Small code sandbox:
+### Code sandbox
+A small code sandbox can be found here:
 https://codesandbox.io/s/autocomplete-tools-08l5h
