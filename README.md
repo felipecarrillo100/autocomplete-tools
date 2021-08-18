@@ -84,19 +84,6 @@ Example of AjaxQuery:
     }
 ```
 * Note: Internally AutoCompleteAjax uses 'fetch', so the parameters passed in the return are compatibles with it. 
-  
-Example for ajaxQuery:
-```javascript
-    const ajaxQuery = (q) => {
-      const queryString = "https://demo.luciad.com/airports/search/?limit=10&q="+q;
-      const headers = {};
-      return {
-          queryString,
-          headers
-      }
-    }
-```
-* Note: Internally AutoCompleteAjax uses 'fetch', so the parameters passed in the return are compatibles with it. 
 
 Example for custom render:
 ```javasctipt
