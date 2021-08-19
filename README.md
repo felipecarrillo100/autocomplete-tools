@@ -1,4 +1,4 @@
-# react-bootstrap-submenu
+# autocomplete-tools
 A React Typescript module that provides autocomplete components. It requires Bootstrap > 1.0
 
 ## How to install:
