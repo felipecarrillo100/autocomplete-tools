@@ -12,7 +12,7 @@ Code is available in javascript and TypeScript versions
 import { AutoComplete, AutoCompleteAjax } from "autocomplete-tools";
 ```
 
-###Step 2: Import the styles:
+### Step 2: Import the styles:
 Make sure you include the styles in your project. Versions in css and scss are available
 * css: autocomplete-tools/css/styles.css
 * scss: autocomplete-tools/scss/styles.scss
