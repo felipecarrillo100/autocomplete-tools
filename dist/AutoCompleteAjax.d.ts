@@ -12,6 +12,7 @@ declare const AutoCompleteAjax: <ObjectType>(options: {
         queryString: string;
     };
     onSelect: (e: ObjectType) => void;
+    onClear?: (() => void) | undefined;
     initialText?: string | undefined;
     keyString: string;
     placeholder?: string | undefined;

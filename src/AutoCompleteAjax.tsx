@@ -15,12 +15,13 @@ const AutoCompleteAjax = <ObjectType, >(options: {
         queryString: string;
     }
     onSelect: (e: ObjectType) => void;
+    onClear?: () => void;
     initialText?: string;
     keyString: string;
     placeholder?: string;
     customRender?: (item: ObjectType) => JSX.Element;
 }) => {
-    const {query, onSelect, keyString, initialText, placeholder, customRender} = options;
+    const {query, onSelect, onClear, keyString, initialText, placeholder, customRender} = options;
 
     const [suggestions, setSuggestions] = useState<any[]>([]);
     const [search, setSearch] = useState(initialText ? initialText : "");
@@ -135,6 +136,13 @@ const AutoCompleteAjax = <ObjectType, >(options: {
 
     const height = undefined;
 
+    const onInputChange = (e: any) => {
+        setSearch(e.target.value);
+        if (e.target.value.length === 0) {
+            if (typeof onClear === "function") onClear();
+        }
+    }
+
     return (
         <div className="Autocomplete">
             <div ref={searchContainer}>
@@ -144,7 +152,7 @@ const AutoCompleteAjax = <ObjectType, >(options: {
                     autoComplete="off"
                     value={search}
                     onClick={showSuggestion}
-                    onChange={(e: any) => setSearch(e.target.value)}
+                    onChange={onInputChange}
                     onKeyDown={(e: any) => keyboardNavigation(e)}
                     placeholder={placeholder}
                 />

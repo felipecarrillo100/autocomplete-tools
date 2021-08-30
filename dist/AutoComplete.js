@@ -24,7 +24,7 @@ var react_1 = __importStar(require("react"));
 var AutoCompleteItem_1 = require("./AutoCompleteItem");
 var react_bootstrap_1 = require("react-bootstrap");
 var AutoComplete = function (options) {
-    var data = options.data, onSelect = options.onSelect, keyString = options.keyString, initialText = options.initialText, placeholder = options.placeholder, customRender = options.customRender;
+    var data = options.data, onSelect = options.onSelect, onClear = options.onClear, keyString = options.keyString, initialText = options.initialText, placeholder = options.placeholder, customRender = options.customRender;
     var _a = react_1.useState(false), isVisbile = _a[0], setVisiblity = _a[1];
     var _b = react_1.useState(initialText ? initialText : ""), search = _b[0], setSearch = _b[1];
     var _c = react_1.useState(-1), cursor = _c[0], setCursor = _c[1];
@@ -94,9 +94,16 @@ var AutoComplete = function (options) {
         }
     };
     var height = undefined;
+    var onInputChange = function (e) {
+        setSearch(e.target.value);
+        if (e.target.value.length === 0) {
+            if (typeof onClear === "function")
+                onClear();
+        }
+    };
     return (react_1.default.createElement("div", { className: "Autocomplete" },
         react_1.default.createElement("div", { ref: searchContainer },
-            react_1.default.createElement(react_bootstrap_1.Form.Control, { type: "search", name: "search", autoComplete: "off", value: search, onClick: showSuggestion, onChange: function (e) { return setSearch(e.target.value); }, onKeyDown: function (e) { return keyboardNavigation(e); }, placeholder: placeholder }),
+            react_1.default.createElement(react_bootstrap_1.Form.Control, { type: "search", name: "search", autoComplete: "off", value: search, onClick: showSuggestion, onChange: onInputChange, onKeyDown: function (e) { return keyboardNavigation(e); }, placeholder: placeholder }),
             react_1.default.createElement("div", { style: { position: "relative" } },
                 react_1.default.createElement("div", { className: "search-result " + (isVisbile ? "visible" : "invisible"), style: { top: height } },
                     react_1.default.createElement("ul", { className: "list-group", ref: searchResultRef }, suggestions.map(function (item, idx) {
